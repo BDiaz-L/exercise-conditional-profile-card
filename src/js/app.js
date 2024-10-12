@@ -85,6 +85,14 @@ window.onload = function() {
           ? true
           : this.value == "false"
           ? false
+          : attribute == "twitter"
+          ? "https://x.com/" + this.value
+          : attribute == "github"
+          ? "https://github.com/" + this.value
+          : attribute == "linkedin"
+          ? "https://www.linkedin.com/in/" + this.value
+          : attribute == "instagram"
+          ? "https://www.instagram.com/" + this.value
           : this.value;
       render(Object.assign(window.variables, values)); // render again the card with new values
     });
